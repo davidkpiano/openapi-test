@@ -1,0 +1,16 @@
+{
+  "name": "openapi-test",
+  "version": "1.0.0",
+  "description": "OpenAPI Testing Utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openapi",
+    "swagger",
+    "test"
+  ],
+  "author": "David Khourshid",
+  "license": "MIT"
+}
