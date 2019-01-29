@@ -29,13 +29,17 @@ function applyTemplate(
   return template(value, options)(params);
 }
 
+const isLocal = !!yargs.argv.local;
+const swaggerFile = yargs.argv.file as string;
+
+if (!swaggerFile) {
+    throw new Error('Must specify --file (path of swagger JSON file)');
+}
 const swaggerSpec = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./examples/petstore/swagger.json"), {
+  fs.readFileSync(swaggerFile, {
     encoding: "utf-8"
   })
 ) as SwaggerSpec;
-
-const isLocal = !!yargs.argv.local;
 const host = isLocal
   ? "localhost:5000"
   : (yargs.argv.host as string) ||
