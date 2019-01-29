@@ -4,7 +4,8 @@
   "description": "OpenAPI Testing Utility",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "tsc && mocha ./lib/index.js"
   },
   "keywords": [
     "openapi",
