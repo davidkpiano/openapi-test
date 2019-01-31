@@ -2,10 +2,13 @@
   "name": "openapi-test",
   "version": "1.0.0",
   "description": "OpenAPI Testing Utility",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "tsc && mocha ./lib/index.js"
+    "test": ""
+  },
+  "bin": {
+    "openapi-test": "./lib/index.js"
   },
   "keywords": [
     "openapi",

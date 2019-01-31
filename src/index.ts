@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as mocha from "mocha";
 import * as chai from "chai";
 import * as path from "path";
@@ -33,7 +35,7 @@ const isLocal = !!yargs.argv.local;
 const swaggerFile = yargs.argv.file as string;
 
 if (!swaggerFile) {
-    throw new Error('Must specify --file (path of swagger JSON file)');
+  throw new Error("Must specify --file (path of swagger JSON file)");
 }
 const swaggerSpec = JSON.parse(
   fs.readFileSync(swaggerFile, {

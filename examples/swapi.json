@@ -67,6 +67,26 @@
           {
             "apikeyQuery": []
           }
+        ],
+        "x-tests": [
+          {
+            "description": "success",
+            "params": {
+              "id": 1
+            },
+            "response": {
+              "status": 200
+            }
+          },
+          {
+            "description": "unknown film",
+            "params": {
+              "id": 100
+            },
+            "response": {
+              "status": 404
+            }
+          }
         ]
       }
     },
